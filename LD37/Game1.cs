@@ -4,6 +4,7 @@ using LD37.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 
 namespace LD37
@@ -14,6 +15,8 @@ namespace LD37
     public class Game1 : Game
     {
         #region Variables
+        public static Random RND = new Random();
+
         GraphicsDeviceManager   graphics;
         SpriteBatch             spriteBatch;
 
@@ -25,9 +28,13 @@ namespace LD37
 
 
         public Game1()
-        {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+        {           
+            graphics                                = new GraphicsDeviceManager(this);
+
+            graphics.PreferredBackBufferWidth       = 960;
+            graphics.PreferredBackBufferHeight      = 960;
+
+            Content.RootDirectory                   = "Content";            
         }
 
         /// <summary>
@@ -46,6 +53,8 @@ namespace LD37
 
             entityManager.GameEntityLists.Add(new TestEntity());
             entityManager.GameEntityLists.Add(new TestEntity2());
+
+            new Level.LevelEditor().GenerateLevel(25);
 
             base.Initialize();
         }

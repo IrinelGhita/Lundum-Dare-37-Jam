@@ -33,3 +33,4 @@ E:\GitHub\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.pdb
 E:\GitHub\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.csprojResolveAssemblyReference.cache
 E:\GitHub\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.Properties.Resources.resources
 E:\GitHub\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.csproj.GenerateResource.Cache
+C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\Content\PNG\statue_form.png
