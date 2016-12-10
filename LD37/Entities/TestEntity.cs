@@ -1,27 +1,32 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace LD37.Entities
 {
-    class TestEntity : AbstractEntity
+    class TestEntity : GameEntity
     {
         #region Variables
 
         #endregion
 
         #region Constructors
-        public TestEntity() : base()
+        public TestEntity() : base(100, 10)
         {
-            this.spriteName = "lich_form";
+            this.SpriteName = "lich_form";
         }
         #endregion
 
         #region Public methods
         public override void Update()
         {
-            
+            if (Keyboard.GetState().IsKeyDown(Keys.S))
+                position.Y += 5;
+
+            if (Keyboard.GetState().IsKeyDown(Keys.W))
+                position.Y -= 5;
         }
         #endregion
 

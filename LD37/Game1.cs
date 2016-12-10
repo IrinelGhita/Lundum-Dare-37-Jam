@@ -1,4 +1,5 @@
 ﻿using LD37.Entities;
+using LD37.GameLogic;
 using LD37.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -19,7 +20,8 @@ namespace LD37
         private List<AbstractEntity> entityList;
 
         // Singletons
-        SpriteManager spriteManager;
+        SpriteManager       spriteManager;
+        CollisionManager    collisionManager;
         #endregion
 
 
@@ -78,6 +80,13 @@ namespace LD37
                 Exit();
 
             // TODO: Add your update logic here
+            collisionManager = new CollisionManager(entityList);
+            collisionManager.CollideDetect();
+
+            for (int i = 0; i < entityList.Count; i++)
+            {
+                entityList[i].Update();
+            }
 
 
             base.Update(gameTime);
@@ -97,7 +106,7 @@ namespace LD37
             // Draw all the entities
             for (int i = 0; i < entityList.Count; i++)
             {
-                spriteBatch.Draw(spriteManager.GetSprite(entityList[i].spriteName), entityList[i].position, Color.White);
+                spriteBatch.Draw(spriteManager.GetSprite(entityList[i].SpriteName), entityList[i].Position, Color.White);
             }
 
             spriteBatch.End();

@@ -9,8 +9,8 @@ namespace LD37.Entities
     abstract class AbstractEntity
     {
         #region Variables
-        Vector2     position;
-        Rectangle   hitBox;
+        protected Vector2     position;
+        protected Rectangle   hitBox;
         #endregion
 
         #region Properties
