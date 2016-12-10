@@ -24,10 +24,11 @@ TODO:
       
   - Dragos:
    - <s>Items</s>
-    - Equipable
-    - Consumable
+     - <s>Equipable</s>
+     - <s>Consumable<s>     
    - <s>Effects</s>
    - <s>Game Entity</s>
+   - Player entity
   
 IDEAS:  
  - Turn based Dungeon Crawler RPG, level changes on trigger
