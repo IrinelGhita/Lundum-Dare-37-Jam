@@ -13,10 +13,10 @@ namespace LD37
     public class Game1 : Game
     {
         #region Variables
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        GraphicsDeviceManager   graphics;
+        SpriteBatch             spriteBatch;
 
-        private List<AbstractEntity> entitiesList;
+        private List<AbstractEntity> entityList;
 
         // Singletons
         SpriteManager spriteManager;
@@ -40,7 +40,7 @@ namespace LD37
             // TODO: Add your initialization logic here            
 
             spriteManager = SpriteManager.Instance;
-            entitiesList = new List<AbstractEntity>();
+            entityList = new List<AbstractEntity>();
 
             base.Initialize();
         }
@@ -94,9 +94,9 @@ namespace LD37
             spriteBatch.Begin();
 
             // Draw all the entities
-            for (int i = 0; i < entitiesList.Count; i++)
+            for (int i = 0; i < entityList.Count; i++)
             {
-                spriteBatch.Draw(spriteManager.GetSprite(entitiesList[i].spriteName), entitiesList[i].position, Color.White);
+                spriteBatch.Draw(spriteManager.GetSprite(entityList[i].spriteName), entityList[i].position, Color.White);
             }
 
             spriteBatch.End();
