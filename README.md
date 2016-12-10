@@ -21,7 +21,10 @@ TODO:
    - Entity Manager
       
   - Dragos:
-  
+   - <s>Items</s>
+    - Equipable
+    - Consumable
+   - <s>Effects</s>
   
 IDEAS:  
  - Turn based Dungeon Crawler RPG, level changes on trigger
