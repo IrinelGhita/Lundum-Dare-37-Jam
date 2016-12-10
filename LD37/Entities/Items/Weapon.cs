@@ -6,20 +6,18 @@ using System.Text;
 
 namespace LD37.Entities.Items
 {
-    enum WeaponType { Melee, Ranged};
 
     class Weapon : Item 
     {
         #region Properties
         public int Damage { get; protected set; }
-        public WeaponType Type { get; protected set; }
         #endregion
 
         #region Constructors
-        public Weapon(string Name, string Description, int Value, int Damage, WeaponType Type) : base(Name, Description, Value)
+        public Weapon(string Name, string Description, int Value, int Damage, Equipable Type,bool isPlaceholder= false) : base(Name, Description, Value,Type)
         {
             this.Damage = Damage;
-            this.Type = Type;
+            IsPlaceholder = isPlaceholder;
         }
         #endregion
 

@@ -6,20 +6,18 @@ using System.Text;
 
 namespace LD37.Entities.Items
 {
-    enum ArmourSlot { Headgear, Chest, Boots, Shield, Gloves, Cloak, None };
 
     class Armour : Item
     {
         #region Properties
         public int Resistance { get; protected set; }
-        public ArmourSlot Slot { get; protected set; }
         #endregion
 
         #region Constructors
-        public Armour(string Name, string Description, int Value, int Resistance, ArmourSlot Slot) : base(Name, Description, Value)
+        public Armour(string Name, string Description, int Value, int Resistance, Equipable Slot, bool isPlaceholder=false) : base(Name, Description, Value,Slot)
         {
             this.Resistance = Resistance;
-
+            IsPlaceholder = isPlaceholder;
         }
         #endregion
 

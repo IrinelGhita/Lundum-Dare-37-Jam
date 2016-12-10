@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using static LD37.Entities.Item;
 
 namespace LD37.Entities
 {
@@ -23,13 +24,13 @@ namespace LD37.Entities
         {
             inventory = new Item[8, 4];
 
-            EquipItem(new Armour("No headgear", "", 0, 0, ArmourSlot.Headgear));
-            EquipItem(new Armour("No chest armour", "", 0, 0, ArmourSlot.Chest));
-            EquipItem(new Armour("No boots", "", 0, 0, ArmourSlot.Boots));
-            EquipItem(new Armour("No shield", "", 0, 0, ArmourSlot.Shield));
-            EquipItem(new Armour("No gloves", "", 0, 0, ArmourSlot.Gloves));
-            EquipItem(new Armour("No cloak", "", 0, 0, ArmourSlot.Cloak));
-            EquipItem(new Weapon("Unarmed", "I was born a brawler", 0, 3, WeaponType.Melee));
+            EquipItem(new Armour("No headgear", "", 0, 0, Equipable.Headgear));
+            EquipItem(new Armour("No chest armour", "", 0, 0, Equipable.Chest));
+            EquipItem(new Armour("No boots", "", 0, 0, Equipable.Boots));
+            EquipItem(new Armour("No shield", "", 0, 0, Equipable.Shield));
+            EquipItem(new Armour("No gloves", "", 0, 0, Equipable.Gloves));
+            EquipItem(new Armour("No cloak", "", 0, 0, Equipable.Cloak));
+            EquipItem(new Weapon("Unarmed", "I was born a brawler", 0, 3, Equipable.MeleeWeapon));
         }
         #endregion
 
@@ -43,11 +44,11 @@ namespace LD37.Entities
                 {
                     PlaceItemInInventory(item, targetInventorySpace);
                     if(replaceWithEmpty)
-                        EquipEmpty(ArmourSlot.None);
+                        EquipEmpty(Equipable.MeleeWeapon);
                 }
                 else
                 {
-                    ArmourSlot slot = ((Armour)item).Slot;
+                    Equipable slot = item.EquipableSlot;
                     PlaceItemInInventory(item, targetInventorySpace);
                     if (replaceWithEmpty)
                         EquipEmpty(slot);
@@ -75,59 +76,112 @@ namespace LD37.Entities
             return -1;
         }
 
-        private void EquipEmpty(ArmourSlot slot)
+        private void EquipEmpty(Equipable slot)
         {
             switch (slot)
             {
-                case ArmourSlot.Boots:
+                case Equipable.Boots:
                     {
-                        EquipItem(new Armour("No boots", "", 0, 0, ArmourSlot.Boots));
+                        EquipItem(new Armour("No boots", "", 0, 0, Equipable.Boots,true));
                         break;
                     }
-                case ArmourSlot.Headgear:
+                case Equipable.Headgear:
                     {
-                        EquipItem(new Armour("No headgear", "", 0, 0, ArmourSlot.Headgear));
+                        EquipItem(new Armour("No headgear", "", 0, 0, Equipable.Headgear, true));
                         break;
                     }
-                case ArmourSlot.Chest:
+                case Equipable.Chest:
                     {
-                        EquipItem(new Armour("No chest armour", "", 0, 0, ArmourSlot.Chest));
+                        EquipItem(new Armour("No chest armour", "", 0, 0, Equipable.Chest, true));
                         break;
                     }
-                case ArmourSlot.Shield:
+                case Equipable.Shield:
                     {
-                        EquipItem(new Armour("No shield", "", 0, 0, ArmourSlot.Shield));
+                        EquipItem(new Armour("No shield", "", 0, 0, Equipable.Shield, true));
                         break;
                     }
-                case ArmourSlot.Gloves:
+                case Equipable.Gloves:
                     {
-                        EquipItem(new Armour("No gloves", "", 0, 0, ArmourSlot.Gloves));
+                        EquipItem(new Armour("No gloves", "", 0, 0, Equipable.Gloves, true));
                         break;
                     }
-                case ArmourSlot.Cloak:
+                case Equipable.Cloak:
                     {
-                        EquipItem(new Armour("No cloak", "", 0, 0, ArmourSlot.Cloak));
+                        EquipItem(new Armour("No cloak", "", 0, 0, Equipable.Cloak, true));
                         break;
                     }
-                default:
+                case Equipable.MeleeWeapon:
                     {
-                        EquipItem(new Weapon("Unarmed", "I was born a brawler", 0, 3, WeaponType.Melee));
+                        EquipItem(new Weapon("Unarmed", "I was born a brawler", 0, 3, Equipable.MeleeWeapon, true));
                         break;
                     }
             }
         }
 
         /// <summary>
-        /// Equips an item - Overloads any current gear
+        /// Equips an item - Overload - Do not use unless you know what you're doing
         /// </summary>
         /// <param name="item">Item to equip</param>
-        /// <returns>Equipped successfully?</returns>
-        private bool EquipItem(Item item)
+        /// <returns>Equipment in Slot</returns>
+        private Item EquipItem(Item item)
         {
+            Item equiped=null;
+
+            switch (item.EquipableSlot)
+            {
+                case Equipable.Boots:
+                    {
+                        equiped = boots;
+                        boots = (Armour)item;
+                        break;
+                    }
+                case Equipable.Headgear:
+                    {
+                        equiped = headgear;
+                        headgear = (Armour)item;
+                        break;
+                    }
+                case Equipable.Chest:
+                    {
+                        equiped = chest;
+                        chest = (Armour)item;
+                        break;
+                    }
+                case Equipable.Shield:
+                    {
+                        equiped = shield;
+                        shield = (Armour)item;
+                        break;
+                    }
+                case Equipable.Gloves:
+                    {
+                        equiped = gloves;
+                        gloves = (Armour)item;
+                        break;
+                    }
+                case Equipable.Cloak:
+                    {
+                        equiped = cloak;
+                        cloak = (Armour)item;
+                        break;
+                    }
+                case Equipable.MeleeWeapon:
+                    {
+                        equiped = equipedWeapon;
+                        equipedWeapon = (Weapon)item;
+                        break;
+                    }
+                case Equipable.Ranged:
+                    {
+                        equiped = equipedWeapon;
+                        equipedWeapon = (Weapon)item;
+                        break;
+                    }
+            }
 
             //TODO: Add the onscreen placement logic
 
-            return true;
+            return equiped;
         }
 
         /// <summary>
@@ -136,13 +190,20 @@ namespace LD37.Entities
         /// <param name="itemInventoryPosition">Position in inventory - Rows contain : 0-7,8-15,16-23,24-31</param>
         private void EquipItemFromInventory(int itemInventoryPosition)
         {
-            //Add logic
+            Item item = inventory[itemInventoryPosition % 8, itemInventoryPosition / 8];
 
+            Item formerItem = EquipItem(item);
+
+            if (formerItem != null && !formerItem.IsPlaceholder)
+            {
+                PlaceItemInInventory(formerItem, itemInventoryPosition);
+            }
         }
 
         private void PlaceItemInInventory(Item item, int position)
         {
             inventory[position % 8, position / 8] = item;
+
             //TODO: Add the onscreen placement logic
         }
         #endregion
