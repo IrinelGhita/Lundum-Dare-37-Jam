@@ -9,7 +9,7 @@ namespace LD37.Entities
     {
 
         #region Variables
-        int currentHP,maxHP,damage;
+        int currentHP, maxHP, damage;
         #endregion
 
         #region Properties
@@ -20,7 +20,7 @@ namespace LD37.Entities
         #endregion
 
         #region Constructors
-        public GameEntity(int maxHP,int damage):base()
+        public GameEntity(int maxHP, int damage) : base()
         {
             this.damage = damage;
             this.maxHP = maxHP;
