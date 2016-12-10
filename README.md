@@ -13,7 +13,7 @@ TODO:
   - <s>Choose IDE</s>
   - Irinel:
    - <s>SpriteLoader Singleton</s>
-   - SpriteManager Singleton
+   - <s>SpriteManager Singleton</s>
       
   - Dragos:
   
