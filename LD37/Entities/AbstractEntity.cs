@@ -9,10 +9,15 @@ namespace LD37.Entities
     abstract class AbstractEntity
     {
         #region Variables
-        public      Vector2     position        { get; set; }
-        public      String      spriteName      { get; set; }
-        public      String      entityType      { get; set; }
-        public      Rectangle   hitBox          { get; set; }        
+        Vector2 position;
+        Rectangle hitBox;
+        #endregion
+
+        #region Properties
+        public Vector2     Position        { get { return position; } set { position = value; } }
+        public String      SpriteName      { get; set; }
+        public String      EntityType      { get; set; }
+        public Rectangle   HitBox          { get { return hitBox; } set { hitBox = value; } }        
         #endregion
 
         #region Constructors
@@ -26,16 +31,7 @@ namespace LD37.Entities
         {
 
         }
-
-        public virtual bool CanCollide(AbstractEntity CollidedEntity)
-        {
-            return true;
-        }
-
-        public virtual void OnCollision(AbstractEntity CollidedEntity)
-        {
-
-        }
+       
         #endregion
 
         #region Private methods

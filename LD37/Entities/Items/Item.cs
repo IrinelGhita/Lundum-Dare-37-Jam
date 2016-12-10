@@ -8,11 +8,11 @@ namespace LD37.Entities
 {
     abstract class Item :AbstractEntity
     {
-        #region Variables
+        #region Properties
 
-        public String name { get; set; }
-        public String description { get; set; }
-        public String value { get; set; }
+        public String Name { get; set; }
+        public String Description { get; set; }
+        public String Value { get; set; }
 
         #endregion
 
