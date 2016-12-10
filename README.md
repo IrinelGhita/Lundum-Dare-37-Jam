@@ -25,6 +25,7 @@ TODO:
     - Equipable
     - Consumable
    - <s>Effects</s>
+   - <s>Game Entity</s>
   
 IDEAS:  
  - Turn based Dungeon Crawler RPG, level changes on trigger
