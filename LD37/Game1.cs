@@ -45,6 +45,7 @@ namespace LD37
             entityList = new List<GameEntity>();
 
             entityList.Add(new TestEntity());
+            entityList.Add(new TestEntity2());
 
             base.Initialize();
         }

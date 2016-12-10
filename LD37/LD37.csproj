@@ -58,6 +58,7 @@
     <Compile Include="Entities\Items\Item.cs" />
     <Compile Include="Entities\Non-Tangible\Effect.cs" />
     <Compile Include="Entities\TestEntity.cs" />
+    <Compile Include="Entities\TestEntity2.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameLogic\CollisionManager.cs" />
     <Compile Include="Program.cs" />
@@ -82,6 +83,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\PNG\lich_form.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\PNG\statue_form.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\PNG\wall2.png">
