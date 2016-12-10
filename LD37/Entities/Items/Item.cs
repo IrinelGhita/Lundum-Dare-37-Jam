@@ -6,7 +6,7 @@ using System.Text;
 
 namespace LD37.Entities
 {
-    abstract class Item :AbstractEntity
+    class Item :AbstractEntity
     {
         #region Properties
 

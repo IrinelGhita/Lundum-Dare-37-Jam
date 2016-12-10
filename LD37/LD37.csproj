@@ -55,8 +55,10 @@
   <ItemGroup>
     <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="Entities\GameEntity.cs" />
-    <Compile Include="Entities\Items\Abstract\Curative.cs" />
-    <Compile Include="Entities\Items\Abstract\Item.cs" />
+    <Compile Include="Entities\Items\Armour.cs" />
+    <Compile Include="Entities\Items\Curative.cs" />
+    <Compile Include="Entities\Items\Item.cs" />
+    <Compile Include="Entities\Items\Weapon.cs" />
     <Compile Include="Entities\Non-Tangible\Effect.cs" />
     <Compile Include="Entities\TestEntity.cs" />
     <Compile Include="Entities\TestEntity2.cs" />
@@ -121,9 +123,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\Items\Specific\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

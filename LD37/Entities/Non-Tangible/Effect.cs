@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LD37.Entities.Non_Tangible
 {
-    enum EffectType { None,Cure, InstantDamage};
+    enum EffectType { None, Cure, InstantDamage, Equip};
 
     class Effect
     {
