@@ -28,3 +28,5 @@ C:\Projects\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.csproj.GenerateResource.C
 C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\Content\PNG\cobbles2.png
 C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\Content\PNG\wall2.png
 C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\Content\PNG\lich_form.png
+E:\GitHub\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.exe
+E:\GitHub\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.pdb
