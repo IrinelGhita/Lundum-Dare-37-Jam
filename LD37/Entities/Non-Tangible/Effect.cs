@@ -7,9 +7,24 @@ namespace LD37.Entities.Non_Tangible
 {
     class Effect
     {
-        public Effect()
-        {
+        #region Variables
+        #endregion
 
+        #region Properties
+        public String Description { get; private set; }
+        #endregion
+
+        #region Constructors
+        public Effect(GameEntity entity)
+        {
+            Description = "The item had no effect";
         }
+        #endregion
+
+        #region Public methods
+        #endregion
+
+        #region Private methods
+        #endregion
     }
 }

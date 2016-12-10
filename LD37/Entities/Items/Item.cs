@@ -28,10 +28,10 @@ namespace LD37.Entities
 
         #region Public methods
 
-        public virtual Effect Use(AbstractEntity entity)
+        public virtual Effect Use(GameEntity entity)
         {
 
-            return new Effect();
+            return new Effect(entity);
         }
 
         #endregion
