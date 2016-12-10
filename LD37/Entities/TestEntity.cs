@@ -13,7 +13,7 @@ namespace LD37.Entities
         #endregion
 
         #region Constructors
-        public TestEntity() : base(100, 10)
+        public TestEntity() : base("lich",100, 10)
         {
             this.SpriteName = "lich_form";
         }

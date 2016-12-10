@@ -12,7 +12,7 @@ namespace LD37.Entities
         #endregion
 
         #region Constructors
-        public TestEntity2() : base(100, 10)
+        public TestEntity2() : base("statue",100, 10)
         {
             this.SpriteName = "statue_form";
             position.Y = 100;
