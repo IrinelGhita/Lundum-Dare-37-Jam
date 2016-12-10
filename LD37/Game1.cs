@@ -17,11 +17,10 @@ namespace LD37
         GraphicsDeviceManager   graphics;
         SpriteBatch             spriteBatch;
 
-        private List<GameEntity> entityList;
-
         // Singletons
         SpriteManager       spriteManager;
         CollisionManager    collisionManager;
+        EntityManager       entityManager;
         #endregion
 
 
@@ -41,11 +40,12 @@ namespace LD37
         {
             // TODO: Add your initialization logic here            
 
-            spriteManager = SpriteManager.Instance;
-            entityList = new List<GameEntity>();
+            spriteManager   = SpriteManager.Instance;
+            entityManager   = EntityManager.Instance;
 
-            entityList.Add(new TestEntity());
-            entityList.Add(new TestEntity2());
+
+            entityManager.GameEntityLists.Add(new TestEntity());
+            entityManager.GameEntityLists.Add(new TestEntity2());
 
             base.Initialize();
         }
@@ -83,12 +83,12 @@ namespace LD37
                 Exit();
 
             // TODO: Add your update logic here
-            collisionManager = new CollisionManager(entityList);
+            collisionManager = new CollisionManager(entityManager.GameEntityLists);
             collisionManager.CollideDetect();
 
-            for (int i = 0; i < entityList.Count; i++)
+            for (int i = 0; i < entityManager.GameEntityLists.Count; i++)
             {
-                entityList[i].Update();
+                entityManager.GameEntityLists[i].Update();
             }
 
 
@@ -107,9 +107,12 @@ namespace LD37
             spriteBatch.Begin();
 
             // Draw all the entities
-            for (int i = 0; i < entityList.Count; i++)
+            for (int i = 0; i < entityManager.GameEntityLists.Count; i++)
             {
-                spriteBatch.Draw(spriteManager.GetSprite(entityList[i].SpriteName), entityList[i].Position, Color.White);
+                spriteBatch.Draw(
+                    spriteManager.GetSprite(entityManager.GameEntityLists[i].SpriteName), 
+                    entityManager.GameEntityLists[i].Position, 
+                    Color.White);
             }
 
             spriteBatch.End();

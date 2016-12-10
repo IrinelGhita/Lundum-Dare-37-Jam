@@ -28,7 +28,7 @@ namespace LD37.Sprites
         #endregion
 
         #region Variables
-        private Dictionary<String, Texture2D> spriteDictionary;
+        private Dictionary<string, Texture2D> spriteDictionary;
         #endregion
 
         private SpriteManager()
@@ -37,7 +37,7 @@ namespace LD37.Sprites
         }
 
         #region Public methods
-        public Texture2D GetSprite(String SpriteName)
+        public Texture2D GetSprite(string SpriteName)
         {
             return spriteDictionary[SpriteName];
         }
