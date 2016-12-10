@@ -60,6 +60,7 @@
     <Compile Include="Entities\Items\Item.cs" />
     <Compile Include="Entities\Items\Weapon.cs" />
     <Compile Include="Entities\Non-Tangible\Effect.cs" />
+    <Compile Include="Entities\PlayerEntity.cs" />
     <Compile Include="Entities\TestEntity.cs" />
     <Compile Include="Entities\TestEntity2.cs" />
     <Compile Include="Game1.cs" />

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace LD37.Entities.Items
 {
-    enum ArmourSlot { Headgear, Chest, Boots, Shield};
+    enum ArmourSlot { Headgear, Chest, Boots, Shield, Gloves, Cloak, None };
 
     class Armour : Item
     {

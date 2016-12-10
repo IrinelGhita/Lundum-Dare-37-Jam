@@ -15,16 +15,17 @@ namespace LD37.Entities
         #region Properties
         public int HP { get { return currentHP; } }
         public int MaxHP { get { return maxHP; } }
-        public String Name { get; set; }
+        public string Name { get; protected set; }
         public int Damage { get { return damage; } }
         #endregion
 
         #region Constructors
-        public GameEntity(int maxHP, int damage) : base()
+        public GameEntity(string Name,int maxHP, int damage) : base()
         {
             this.damage = damage;
             this.maxHP = maxHP;
             currentHP = maxHP;
+            this.Name = Name;
         }
         #endregion
 
