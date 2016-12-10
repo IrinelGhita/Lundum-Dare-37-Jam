@@ -17,23 +17,22 @@ namespace LD37.Entities
 
         #region Constructors
         public AbstractEntity()
-        {
-
+        {            
         }
         #endregion
 
         #region Public methods
-        public void Update()
+        public virtual void Update()
         {
 
         }
 
-        public bool CanCollide(AbstractEntity CollidedEntity)
+        public virtual bool CanCollide(AbstractEntity CollidedEntity)
         {
             return true;
         }
 
-        public void OnCollision(AbstractEntity CollidedEntity)
+        public virtual void OnCollision(AbstractEntity CollidedEntity)
         {
 
         }
