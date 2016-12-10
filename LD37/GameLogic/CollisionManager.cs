@@ -9,11 +9,11 @@ namespace LD37.GameLogic
     class CollisionManager
     {
         #region Variables
-        private List<AbstractEntity> entityList;
+        private List<GameEntity> entityList;
         #endregion
 
         #region Constructors
-        public CollisionManager(List<AbstractEntity> EntityList)
+        public CollisionManager(List<GameEntity> EntityList)
         {            
             this.entityList = EntityList;
         }
@@ -28,16 +28,10 @@ namespace LD37.GameLogic
                 for (int j = i + 1; j < entityList.Count; j++)
                 {
                     // Check if the two hitboxes intersect
-                    if (entityList[i].hitBox.Intersects(entityList[j].hitBox))
+                    if (entityList[i].HitBox.Intersects(entityList[j].HitBox))
                     {
-                        // Check if both entities can collide with each other
-                        if (entityList[i].CanCollide(entityList[j]) &&
-                            entityList[j].CanCollide(entityList[i]))
-                        {
-                            // Call the OnCollision method of both entities
-                            entityList[i].OnCollision(entityList[j]);
-                            entityList[j].OnCollision(entityList[i]);
-                        }
+                        entityList[i].OnCollision(entityList[j]);
+                        entityList[j].OnCollision(entityList[i]);
                     }
                 }
             }

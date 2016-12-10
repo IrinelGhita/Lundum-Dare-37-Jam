@@ -11,6 +11,7 @@ Programming Guidelines:
 TODO:
   - <s>Create programming guildelines</s>
   - <s>Choose IDE</s>
+  
   - Irinel:
    - <s>SpriteLoader Singleton</s>
    - <s>SpriteManager Singleton</s>

@@ -17,7 +17,7 @@ namespace LD37
         GraphicsDeviceManager   graphics;
         SpriteBatch             spriteBatch;
 
-        private List<AbstractEntity> entityList;
+        private List<GameEntity> entityList;
 
         // Singletons
         SpriteManager       spriteManager;
@@ -42,7 +42,7 @@ namespace LD37
             // TODO: Add your initialization logic here            
 
             spriteManager = SpriteManager.Instance;
-            entityList = new List<AbstractEntity>();
+            entityList = new List<GameEntity>();
 
             base.Initialize();
         }
