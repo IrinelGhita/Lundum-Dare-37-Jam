@@ -8,13 +8,14 @@ namespace LD37.Entities.Items
 {
     class Curative:Item
     {
-        #region Properties
-
+        #region Variables
+        int healingAmount;
         #endregion
 
         #region Constructors
-        public Curative() : base()
+        public Curative(int healingAmount) : base(healingAmount<10 ? "Lesser healing potion" : healingAmount<30? "Healing potion" : "Greater healing potion","This potion heals for "+healingAmount+" hp",healingAmount*3)
         {
+            this.healingAmount = healingAmount;
         }
         #endregion
 
@@ -24,10 +25,9 @@ namespace LD37.Entities.Items
 
         #region Public methods
 
-        public override Effect Use(GameEntity entity)
+        public override Effect Use()
         {
-
-            return new Effect(entity);
+            return new Effect(EffectType.Cure,healingAmount);
         }
 
         #endregion

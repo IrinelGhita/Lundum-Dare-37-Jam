@@ -10,15 +10,18 @@ namespace LD37.Entities
     {
         #region Properties
 
-        public String Name { get; protected set; }
-        public String Description { get; protected set; }
-        public String Value { get; protected set; }
+        public string Name { get; protected set; }
+        public string Description { get; protected set; }
+        public int Value { get; protected set; }
 
         #endregion
 
         #region Constructors
-        public Item() : base()
+        public Item(string Name, string Description, int Value) : base()
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Value = Value;
         }
         #endregion
 
@@ -28,10 +31,10 @@ namespace LD37.Entities
 
         #region Public methods
 
-        public virtual Effect Use(GameEntity entity)
+        public virtual Effect Use()
         {
 
-            return new Effect(entity);
+            return new Effect(EffectType.None,0);
         }
 
         #endregion
