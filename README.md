@@ -19,14 +19,16 @@ TODO:
    - <s>List of abstractEntity </s>
    - <s>Sample drawing of entities</s>
    - <s>Simple collision detection</s>
-   - Entity Manager
+   - <s>Entity Manager</s>
+   - Level generation
       
   - Dragos:
    - <s>Items</s>
-    - Equipable
-    - Consumable
+     - <s>Equipable</s>
+     - <s>Consumable</s>     
    - <s>Effects</s>
    - <s>Game Entity</s>
+   - Player entity
   
 IDEAS:  
  - Turn based Dungeon Crawler RPG, level changes on trigger

@@ -6,15 +6,18 @@ using System.Text;
 
 namespace LD37.Entities.Items
 {
-    class Curative:Item
+
+    class Weapon : Item 
     {
         #region Properties
-
+        public int Damage { get; protected set; }
         #endregion
 
         #region Constructors
-        public Curative() : base()
+        public Weapon(string Name, string Description, int Value, int Damage, Equipable Type,bool isPlaceholder= false) : base(Name, Description, Value,Type)
         {
+            this.Damage = Damage;
+            IsPlaceholder = isPlaceholder;
         }
         #endregion
 
@@ -24,10 +27,9 @@ namespace LD37.Entities.Items
 
         #region Public methods
 
-        public override Effect Use(GameEntity entity)
+        public override Effect Use()
         {
-
-            return new Effect(entity);
+            return new Effect(EffectType.Equip, 0);
         }
 
         #endregion
