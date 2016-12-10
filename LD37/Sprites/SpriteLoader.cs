@@ -31,7 +31,7 @@ namespace LD37.Sprites
         #endregion
 
         #region Variables        
-        private Dictionary<String, Texture2D> spriteDictionary; 
+        private Dictionary<string, Texture2D> spriteDictionary; 
 
         #endregion
 
@@ -42,7 +42,7 @@ namespace LD37.Sprites
         }
 
         #region Public Methods
-        public Dictionary<String, Texture2D> LoadSprites(ContentManager Content)
+        public Dictionary<string, Texture2D> LoadSprites(ContentManager Content)
         {
             LoadAllSpritesFromFolder(Content);
 
@@ -54,7 +54,7 @@ namespace LD37.Sprites
         private void LoadAllSpritesFromFolder(ContentManager Content)
         {                                    
             // Execute for each file in the Content\PNG\ folder
-            foreach (String path in Directory.GetFiles(Content.RootDirectory + "/PNG/"))
+            foreach (string path in Directory.GetFiles(Content.RootDirectory + "/PNG/"))
             {
                 // Execute only for .png files
                 if (Path.GetExtension(path) == ".png")
@@ -67,7 +67,7 @@ namespace LD37.Sprites
             }
         }
 
-        private String GetFileName(String FullPath)
+        private string GetFileName(String FullPath)
         {            
             return Path.GetFileNameWithoutExtension(FullPath);
         }
