@@ -1,7 +1,9 @@
-﻿using LD37.Sprites;
+﻿using LD37.Entities;
+using LD37.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace LD37
 {
@@ -13,6 +15,8 @@ namespace LD37
         #region Variables
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        private List<AbstractEntity> entitiesList;
 
         // Singletons
         SpriteManager spriteManager;
@@ -36,6 +40,7 @@ namespace LD37
             // TODO: Add your initialization logic here            
 
             spriteManager = SpriteManager.Instance;
+            entitiesList = new List<AbstractEntity>();
 
             base.Initialize();
         }
@@ -88,8 +93,11 @@ namespace LD37
             // TODO: Add your drawing code here
             spriteBatch.Begin();
 
-            // Example of drawing and use of SpriteManager: 
-            // spriteBatch.Draw(spriteManager.GetSprite("wall2"), new Vector2(50, 50), Color.White);
+            // Draw all the entities
+            for (int i = 0; i < entitiesList.Count; i++)
+            {
+                spriteBatch.Draw(spriteManager.GetSprite(entitiesList[i].spriteName), entitiesList[i].position, Color.White);
+            }
 
             spriteBatch.End();
 
