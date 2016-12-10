@@ -11,7 +11,7 @@ namespace LD37.Entities.Non_Tangible
         #endregion
 
         #region Properties
-        public String Description { get; private set; }
+        public String Description { get; protected set; }
         #endregion
 
         #region Constructors

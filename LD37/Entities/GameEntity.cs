@@ -9,7 +9,7 @@ namespace LD37.Entities
     {
 
         #region Variables
-        int currentHP, maxHP, damage;
+        protected int currentHP, maxHP, damage;
         #endregion
 
         #region Properties
