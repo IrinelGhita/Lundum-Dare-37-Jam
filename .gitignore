@@ -50,3 +50,8 @@ Temporary Items
 .apdisk
 LD37/.vs/LD37/v14/.suo
 LD37/.vs/LD37/v14/.suo
+LD37/bin/Windows/Debug/LD37.exe
+LD37/bin/Windows/Debug/LD37.pdb
+*.xml
+LD37/obj/x86/Debug/LD37.csproj.FileListAbsolute.txt
+LD37/obj/x86/Debug/LD37.exe
