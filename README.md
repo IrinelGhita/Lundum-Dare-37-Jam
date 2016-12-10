@@ -14,6 +14,10 @@ TODO:
   - Irinel:
    - <s>SpriteLoader Singleton</s>
    - <s>SpriteManager Singleton</s>
+   - <s>Simple Abstract Entity</s>
+   - <s>List of abstractEntity </s>
+   - <s>Sample drawing of entities</s>
+   - Simple collision detection
       
   - Dragos:
   
