@@ -18,6 +18,7 @@ TODO:
    - <s>List of abstractEntity </s>
    - <s>Sample drawing of entities</s>
    - Simple collision detection
+   - Entity Manager
       
   - Dragos:
   
