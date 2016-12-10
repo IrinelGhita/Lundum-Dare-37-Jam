@@ -25,7 +25,7 @@ TODO:
   - Dragos:
    - <s>Items</s>
      - <s>Equipable</s>
-     - <s>Consumable<s>     
+     - <s>Consumable</s>     
    - <s>Effects</s>
    - <s>Game Entity</s>
    - Player entity
