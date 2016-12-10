@@ -11,7 +11,8 @@ namespace LD37.Entities
         #region Variables
         public      Vector2     position        { get; set; }
         public      String      spriteName      { get; set; }
-        public      Rectangle   hitBox          { get; set; }
+        public      String      entityType      { get; set; }
+        public      Rectangle   hitBox          { get; set; }        
         #endregion
 
         #region Constructors
@@ -23,6 +24,16 @@ namespace LD37.Entities
 
         #region Public methods
         public void Update()
+        {
+
+        }
+
+        public bool CanCollide(AbstractEntity CollidedEntity)
+        {
+            return true;
+        }
+
+        public void OnCollision(AbstractEntity CollidedEntity)
         {
 
         }
