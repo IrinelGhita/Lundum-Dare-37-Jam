@@ -10,9 +10,9 @@ namespace LD37.Entities
     {
         #region Properties
 
-        public String Name { get; set; }
-        public String Description { get; set; }
-        public String Value { get; set; }
+        public String Name { get; protected set; }
+        public String Description { get; protected set; }
+        public String Value { get; protected set; }
 
         #endregion
 
