@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="Entities\TestEntity.cs" />
+    <Compile Include="Entities\TestEntity2.cs" />
+    <Compile Include="Entities\UpdatableAbstractEntity.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameLogic\CollisionManager.cs" />
     <Compile Include="Program.cs" />
@@ -75,6 +77,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\PNG\bat_form.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\PNG\cobbles2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

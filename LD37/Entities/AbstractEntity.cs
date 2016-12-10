@@ -10,23 +10,22 @@ namespace LD37.Entities
     {
         #region Variables
         public      Vector2     position        { get; set; }
+        public      Vector2     hitboxSize      { get; set; }
         public      String      spriteName      { get; set; }
         public      String      entityType      { get; set; }
-        public      Rectangle   hitBox          { get; set; }        
+
+        public      Rectangle   hitbox          { get { return CalculateHitbox(); }}        
         #endregion
 
         #region Constructors
         public AbstractEntity()
-        {            
-        }
+        {
+            position    = new Vector2(0, 0);
+            hitboxSize  = new Vector2(50, 50);            
+        }        
         #endregion
 
         #region Public methods
-        public virtual void Update()
-        {
-
-        }
-
         public virtual bool CanCollide(AbstractEntity CollidedEntity)
         {
             return true;
@@ -39,6 +38,10 @@ namespace LD37.Entities
         #endregion
 
         #region Private methods
+        private Rectangle CalculateHitbox()
+        {
+            return new Rectangle(position.ToPoint(), hitboxSize.ToPoint());
+        }
         #endregion
     }
 }
