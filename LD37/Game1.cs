@@ -44,6 +44,8 @@ namespace LD37
             spriteManager = SpriteManager.Instance;
             entityList = new List<GameEntity>();
 
+            entityList.Add(new TestEntity());
+
             base.Initialize();
         }
 

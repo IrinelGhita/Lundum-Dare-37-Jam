@@ -28,6 +28,11 @@ namespace LD37.Entities
             if (Keyboard.GetState().IsKeyDown(Keys.W))
                 position.Y -= 5;
         }
+
+        public override void OnCollision(AbstractEntity CollidedEntity)
+        {
+            base.OnCollision(CollidedEntity);
+        }
         #endregion
 
         #region Private methods
