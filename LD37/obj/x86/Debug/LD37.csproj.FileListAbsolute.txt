@@ -23,3 +23,7 @@ C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Projects\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.csprojResolveAssemblyReference.cache
 C:\Projects\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.exe
 C:\Projects\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.pdb
+C:\Projects\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.Properties.Resources.resources
+C:\Projects\Lundum-Dare-37-Jam\LD37\obj\x86\Debug\LD37.csproj.GenerateResource.Cache
+C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\Content\PNG\cobbles2.png
+C:\Projects\Lundum-Dare-37-Jam\LD37\bin\Windows\Debug\Content\PNG\wall2.png

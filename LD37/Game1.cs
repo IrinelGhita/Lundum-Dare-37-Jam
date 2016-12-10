@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using LD37.Sprites;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -9,8 +10,14 @@ namespace LD37
     /// </summary>
     public class Game1 : Game
     {
+        #region Variables
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        // Singletons
+        SpriteManager spriteManager;
+        #endregion
+
 
         public Game1()
         {
@@ -26,7 +33,9 @@ namespace LD37
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            // TODO: Add your initialization logic here            
+
+            spriteManager = SpriteManager.Instance;
 
             base.Initialize();
         }
@@ -40,7 +49,8 @@ namespace LD37
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            // TODO: use this.Content to load your game content here                   
+            spriteManager.Load(Content);
         }
 
         /// <summary>
@@ -76,6 +86,12 @@ namespace LD37
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            // Example of drawing and use of SpriteManager: 
+            // spriteBatch.Draw(spriteManager.GetSprite("wall2"), new Vector2(50, 50), Color.White);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
