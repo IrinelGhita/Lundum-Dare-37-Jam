@@ -20,6 +20,7 @@ TODO:
    - <s>Sample drawing of entities</s>
    - <s>Simple collision detection</s>
    - <s>Entity Manager</s>
+   - Level generation
       
   - Dragos:
    - <s>Items</s>
