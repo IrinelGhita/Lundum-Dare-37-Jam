@@ -67,6 +67,7 @@
     <Compile Include="GameLogic\CollisionManager.cs" />
     <Compile Include="GameLogic\EntityManager.cs" />
     <Compile Include="Level\DrunkenWalkAlgorithm.cs" />
+    <Compile Include="Level\NotAwfullyElaborateAlgorithm.cs" />
     <Compile Include="Level\LeeAlgorithm.cs" />
     <Compile Include="Level\LevelDebugger.cs" />
     <Compile Include="Level\LevelEditor.cs" />
