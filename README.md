@@ -28,7 +28,8 @@ TODO:
      - <s>Consumable</s>     
    - <s>Effects</s>
    - <s>Game Entity</s>
-   - Player entity
+   - <s>Player entity</s>
+   - Map gen - in dev
   
 IDEAS:  
  - Turn based Dungeon Crawler RPG, level changes on trigger
